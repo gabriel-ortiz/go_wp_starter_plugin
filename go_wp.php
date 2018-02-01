@@ -30,7 +30,7 @@ define( 'GO_WP_INC', plugin_dir_path( __FILE__ ).'includes/');
 define( 'GO_WP_ADMIN', plugin_dir_path( __FILE__ ).'admin/');
 define( 'GO_WP_PUBLIC', plugin_dir_path( __FILE__ ).'public/');
 define( 'GO_WP_LANG', plugin_dir_path( __FILE__ ).'languages/');
-define( 'GO_WP_LIBRARIES', plugin_dir_path( __FILE__ ).'Libraries/');
+define( 'GO_WP_LIBRARIES', plugin_dir_path( __FILE__ ).'includes/libraries/');
 
 //global style urls
 define('GO_WP_ASSETS', plugins_url().'/go_wp_plugin/assets/');
@@ -44,16 +44,23 @@ if ( ! defined( 'MINUTE_IN_SECONDS' ) ) {
 //require_once plugin_dir_path( __FILE__ ) . 'includes/core-functions.php';
 require_once( GO_WP_LIBRARIES . 'extended-cpts.php' );
 require_once( GO_WP_LIBRARIES . 'extended-taxos.php' );
+require_once( GO_WP_LIBRARIES . 'cmb2/init.php' );
+require_once( GO_WP_LIBRARIES . 'cmb2-attached-posts/cmb2-attached-posts-field.php' );
+require_once( GO_WP_LIBRARIES . 'cmb2-post-search-field/cmb2_post_search_field.php' );
+
 
 
 //INCLUDE THE ADMIN FUNCTIONS
 
-require_once GO_WP_ADMIN . 'settings-admin.php';
-require_once GO_WP_ADMIN . 'sections-settings-admin.php';
-require_once GO_WP_ADMIN . 'input-callbacks-admin.php';
-require_once GO_WP_ADMIN . 'settings-notices-admin.php';
+require_once( GO_WP_ADMIN . 'settings-admin.php');
+require_once( GO_WP_ADMIN . 'sections-settings-admin.php');
+require_once( GO_WP_ADMIN . 'input-callbacks-admin.php');
+require_once( GO_WP_ADMIN . 'settings-notices-admin.php');
 
 //INCLUDE THE PUBLIC FUNCTIONS
+require_once( GO_WP_INC . 'cmb2.addons.php' );
+require_once( GO_WP_INC . 'metaboxes.php' );
+require_once( GO_WP_INC . 'post-types.php' );
 
 
 //RUN THE SETUP ADMIN FUNCTIONS
