@@ -16,6 +16,12 @@ if( ! defined('ABSPATH') ){
     exit;
 }
 
+//search and replace for changing plugin prefix
+//find ./ -type f -exec sed -i -e 's/GO_WP/FWF/g' {} \;
+//find ./ -type f -exec sed -i -e 's/go_wp/fwf/g' {} \; 
+
+// find ./ -type f -exec sed -i 's/go_wp/fw/gI' {} \; 
+//  find ./ -type f -exec sed -i -e 's/GO_WP/fw/g' {} \; 
 
 //useful global constants
 define( 'GO_WP_VERSION', '0.1.0');

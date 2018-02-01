@@ -54,7 +54,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('default', ['browser-sync'], function(){
-  gulp.watch(["src/styles/**/*.scss","src/styles/**/*.sass" ], ['styles']);
-  gulp.watch("src/scripts/**/*.js", ['scripts']);
+  gulp.watch(["assets/styles/**/*.scss","assets/styles/**/*.sass" ], ['styles']);
+  gulp.watch("assets/scripts/**/*.js", ['scripts']);
   gulp.watch("*.html", ['bs-reload']);
 });
